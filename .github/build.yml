@@ -1,0 +1,22 @@
+name: build action
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  strategy:
+    matrix:
+      node-version: [ 18,20 ]
+  run-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: {{ matrix.node-version }}
+    - run: npm build
+
+
+
