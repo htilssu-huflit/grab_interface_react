@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary_color: #FFFFFF;
+    --secondary_color: #000000;
+    --primary_background: #dedede;
+    --secondary_background: #FFFFFF;
+}
+
+body {
+    background-color: var(--primary_color);
+    color: var(--secondary_color);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    min-width: 100vw;
+}
+
+::selection {
+    background: #16a34a;
+    color: white;
+}
